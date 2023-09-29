@@ -7,7 +7,6 @@ library(tidyverse)
 ###################
 # 1. read in data #
 ###################
-setwd("/Users/scottbruce/Library/CloudStorage/OneDrive-SharedLibraries-HarvardUniversity/REHAB-HFpEF Ancillary - General/REHAB-HF Power Analysis")
 load("rprotblds.RData")
 
 #####################################################
