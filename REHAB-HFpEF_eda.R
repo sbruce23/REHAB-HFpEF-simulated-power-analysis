@@ -13,26 +13,6 @@ load("rprotblds.RData")
 # 2. EDA for primary outcome (number of rehospitalizations and death events in 6 months)
 ####################################################
 
-# custom theme for ggplot
-hw <- theme_gray()+ theme(
-  plot.title=element_text(hjust=0.5,size=18,face="bold"),
-  plot.subtitle=element_text(hjust=0.5,size=12),
-  plot.caption=element_text(hjust=-.5,size=10),
-  strip.background=element_rect(fill=rgb(.9,.95,1),
-                                colour=gray(.5), linewidth=.2),
-  panel.border=element_rect(fill=FALSE,colour=gray(.70)),
-  panel.grid.minor.y = element_blank(),
-  panel.grid.minor.x = element_blank(),
-  panel.spacing.x = unit(0.2,"cm"),
-  panel.spacing.y = unit(0.2,"cm"),
-  axis.text=element_text(colour="black",size=10),
-  axis.text.y=element_text(margin=ggplot2::margin(0,3,0,3)),
-  axis.text.x=element_text(margin=ggplot2::margin(-1,0,3,0)),
-  axis.title=element_text(size=16,face="bold"),
-  legend.text=element_text(size=14),
-  legend.title = element_blank(),
-);
-
 # check for overdispersion
 mean(rprotblds$nrehosp_death) #1.300412
 var(rprotblds$nrehosp_death) #2.268884
